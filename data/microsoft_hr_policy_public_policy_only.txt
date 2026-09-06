@@ -1,0 +1,655 @@
+MICROSOFT HR POLICY ASSISTANT
+PUBLICLY AVAILABLE MICROSOFT HR / EMPLOYEE INFORMATION
+
+IMPORTANT:
+This dataset contains information publicly available from official Microsoft
+websites. It is NOT Microsoft's complete internal HR handbook. Some detailed
+employee policies are internal or location-specific. The assistant must not
+invent missing policies.
+
+============================================================
+1. COMPANY OVERVIEW
+============================================================
+
+Company:
+Microsoft Corporation
+
+Microsoft's mission is to empower every person and every organization on
+the planet to achieve more.
+
+Microsoft describes its culture around a growth mindset, customer obsession,
+One Microsoft, diversity and inclusion, and making a difference.
+
+Microsoft's Standards of Business Conduct / Trust Code emphasizes:
+- Respect
+- Integrity
+- Accountability
+
+SOURCE:
+Microsoft Standards of Business Conduct
+https://www.microsoft.com/en-us/legal/compliance/sbc/standards
+
+
+============================================================
+2. EMPLOYEE BENEFITS
+============================================================
+
+Microsoft publicly describes employee benefits that support areas including:
+
+- Physical wellbeing
+- Mental wellbeing
+- Emotional wellbeing
+- Financial wellbeing
+- Time away from work
+- Family support
+- Flexible work
+- Learning and education
+- Career development
+- Employee resource groups
+- Workplace perks
+- Performance-based compensation
+- Bonuses
+- Stock awards
+
+Benefits vary according to employee location, role and applicable benefits
+program.
+
+The detailed public benefits information is especially focused on U.S.
+employees.
+
+SOURCE:
+Microsoft Careers - Benefits
+https://careers.microsoft.com/v2/global/en/benefits
+
+
+============================================================
+3. TIME OFF AND LEAVE
+============================================================
+
+Microsoft publicly describes several time-away programs.
+
+These include:
+- Vacation
+- Sick time
+- Holidays
+- Parental leave
+- Family caregiver leave
+- Military leave
+- Bereavement leave
+- Jury duty
+- Unpaid personal leave
+
+Exact eligibility and entitlement depend on employee classification,
+location and applicable benefits plans.
+
+Microsoft does NOT have one publicly stated universal leave entitlement
+for every employee worldwide.
+
+SOURCE:
+Microsoft U.S. Benefits
+https://usbenefits.microsoft.com/us/en/leave-of-absence.html
+
+
+============================================================
+4. U.S. PARENTAL LEAVE
+============================================================
+
+For eligible U.S. Microsoft employees, Microsoft states that new parents
+can take up to 12 weeks off.
+
+Birth mothers/persons may be eligible for an additional eight weeks of
+maternity disability leave.
+
+This can result in up to 20 weeks for eligible birth mothers/persons.
+
+These figures are U.S.-specific and subject to eligibility requirements.
+
+SOURCE:
+Microsoft U.S. Benefits - Leave of Absence
+https://usbenefits.microsoft.com/us/en/leave-of-absence.html
+
+
+============================================================
+5. U.S. FAMILY CAREGIVER LEAVE
+============================================================
+
+For eligible U.S. employees, Microsoft states that family caregiver leave
+can provide up to 12 weeks.
+
+Microsoft states:
+- First 4 weeks: paid at 100% of salary
+- Remaining 8 weeks: unpaid
+
+Eligibility and applicable plan requirements apply.
+
+These provisions should NOT automatically be applied to employees outside
+the United States.
+
+SOURCE:
+Microsoft U.S. Benefits - Leave of Absence
+https://usbenefits.microsoft.com/us/en/leave-of-absence.html
+
+
+============================================================
+6. U.S. SHORT-TERM DISABILITY
+============================================================
+
+Microsoft's public U.S. benefits information describes short-term
+disability leave of up to 26 weeks.
+
+The public information states:
+- First 8 weeks: 100% of salary
+- Remaining weeks: 75% of salary
+
+Eligibility and applicable policy requirements apply.
+
+This information is U.S.-specific.
+
+SOURCE:
+Microsoft U.S. Benefits - Leave of Absence
+https://usbenefits.microsoft.com/us/en/leave-of-absence.html
+
+
+============================================================
+7. U.S. MILITARY LEAVE
+============================================================
+
+For eligible U.S. employees serving in the military, Microsoft states
+that employees can receive up to 30 days of full pay without offset per
+calendar year for military duty.
+
+Additional provisions may apply.
+
+This information is U.S.-specific.
+
+SOURCE:
+Microsoft U.S. Benefits - Leave of Absence
+https://usbenefits.microsoft.com/us/en/leave-of-absence.html
+
+
+============================================================
+8. VACATION / DISCRETIONARY TIME OFF
+============================================================
+
+Microsoft's U.S. benefits information describes vacation and
+Discretionary Time Off programs.
+
+The applicable program depends on employee eligibility and classification.
+
+Microsoft also publicly describes floating holidays for eligible
+employees.
+
+For example, the U.S. benefits information states that eligible
+employees may receive four floating holidays per year.
+
+Part-time employee benefits may be prorated according to applicable
+rules.
+
+This information is U.S.-specific.
+
+SOURCE:
+Microsoft U.S. Benefits - Vacation / DTO
+https://usbenefits.microsoft.com/us/en/vacation-dto.html
+
+
+============================================================
+9. HYBRID AND FLEXIBLE WORK
+============================================================
+
+Microsoft supports different workplace arrangements.
+
+Depending on the role, team and location, work arrangements can include:
+
+- Remote
+- Hybrid
+- Fully on-site
+
+Microsoft states that work arrangements can depend on:
+- Role
+- Team
+- Location
+- Business requirements
+- Customer needs
+- Collaboration requirements
+
+Individual job postings can specify expected worksite arrangements.
+
+Employees should not assume that one remote-work rule applies to every
+Microsoft employee.
+
+SOURCE:
+Microsoft Careers
+https://careers.microsoft.com/v2/global/en/life-at-microsoft/benefits.html
+
+
+============================================================
+10. COMPENSATION
+============================================================
+
+Microsoft describes compensation as being based on factors including:
+
+- Role
+- Level
+- Location
+- Current market data
+- Individual contribution
+
+Compensation may include:
+- Base pay
+- Bonuses
+- Stock awards
+- Other benefits
+
+For bonus-eligible roles, Microsoft describes compensation outcomes as
+considering both what an employee achieves and how the employee achieves it.
+
+Many roles can include stock awards that vest over time.
+
+Compensation and benefits vary by country.
+
+SOURCE:
+Microsoft Careers - Benefits
+https://careers.microsoft.com/v2/global/en/benefits
+
+
+============================================================
+11. PAY EQUITY
+============================================================
+
+Microsoft describes equitable pay as an important practice.
+
+Microsoft states that employees performing substantially similar work
+should be compensated fairly while considering legitimate factors such as:
+
+- Role
+- Level
+- Tenure
+
+Microsoft describes pay equity as part of creating an environment where
+employees can thrive.
+
+SOURCE:
+Microsoft Careers - Benefits
+https://careers.microsoft.com/v2/global/en/benefits
+
+
+============================================================
+12. EQUAL EMPLOYMENT OPPORTUNITY
+============================================================
+
+Microsoft states that it does not discriminate against employees or
+applicants based on protected characteristics.
+
+The policy covers employment activities including:
+
+- Recruitment
+- Hiring
+- Training
+- Compensation
+- Promotion
+- Benefits
+- Social and recreational programs
+- Discipline
+
+Microsoft publicly identifies protected characteristics including:
+
+- Age
+- Ancestry
+- Citizenship
+- Color
+- Family or medical care leave
+- Gender identity or expression
+- Genetic information
+- Immigration status
+- Marital status
+- Medical condition
+- National origin
+- Physical or mental disability
+- Political affiliation
+- Protected veteran or military status
+- Race
+- Ethnicity
+- Religion
+- Sex, including pregnancy
+- Sexual orientation
+
+Other characteristics protected by applicable laws may also apply.
+
+SOURCE:
+Microsoft Careers - Legal Policies
+https://careers.microsoft.com/v2/global/en/legal-policies.html
+
+
+============================================================
+13. REASONABLE ACCOMMODATION
+============================================================
+
+Microsoft states that it provides reasonable accommodation to qualified
+employees with protected disabilities to the extent required by applicable
+laws and regulations where the employee works.
+
+The applicable process and requirements can depend on local law and
+employee circumstances.
+
+SOURCE:
+Microsoft Careers - Legal Policies
+https://careers.microsoft.com/v2/global/en/legal-policies.html
+
+
+============================================================
+14. DIVERSITY AND INCLUSION
+============================================================
+
+Microsoft describes diversity and inclusion as important parts of its
+workplace culture.
+
+Microsoft states that it provides equal employment opportunities to
+qualified candidates and employees.
+
+Microsoft's public standards state that employees should not be
+discriminated against based on protected characteristics.
+
+SOURCE:
+Microsoft Standards of Business Conduct
+https://www.microsoft.com/en-us/legal/compliance/sbc/standards
+
+
+============================================================
+15. TRUST CODE / STANDARDS OF BUSINESS CONDUCT
+============================================================
+
+Microsoft's Standards of Business Conduct are also referred to as the
+Trust Code.
+
+The Trust Code provides guidance on:
+- Employee responsibilities
+- Manager responsibilities
+- Ethical decision-making
+- Business conduct
+- Diversity and inclusion
+- Conflicts of interest
+- Security
+- Confidential information
+- Business integrity
+- Building trust
+
+Microsoft's publicly stated values include:
+- Respect
+- Integrity
+- Accountability
+
+Employees are expected to understand and comply with Microsoft's
+applicable standards and policies.
+
+SOURCE:
+Microsoft Standards of Business Conduct
+https://www.microsoft.com/en-us/legal/compliance/sbc/standards
+
+
+============================================================
+16. CONFLICTS OF INTEREST
+============================================================
+
+Microsoft's Trust Code provides guidance regarding conflicts of interest.
+
+Employees should act in Microsoft's best interests and avoid situations
+where personal relationships or financial interests could improperly
+influence business decisions.
+
+Potential conflicts should be disclosed and employees should seek
+appropriate advice or approval.
+
+Outside activities should not interfere with Microsoft's interests or
+violate applicable agreements and policies.
+
+SOURCE:
+Microsoft Standards of Business Conduct
+https://www.microsoft.com/en-us/legal/compliance/sbc/standards
+
+
+============================================================
+17. REPORTING CONCERNS
+============================================================
+
+Microsoft encourages employees and representatives to raise concerns
+about potential violations of:
+
+- Standards of Business Conduct
+- Microsoft policies
+- Applicable law
+- Compliance requirements
+
+Microsoft provides reporting channels for concerns.
+
+Employees can use Microsoft's Integrity Portal and other designated
+reporting channels.
+
+SOURCE:
+Microsoft Report a Concern
+https://www.microsoft.com/en-us/legal/compliance/sbc/report-a-concern
+
+
+============================================================
+18. CONFIDENTIALITY OF REPORTS
+============================================================
+
+Microsoft's reporting information describes processes for handling
+compliance concerns and protecting confidentiality.
+
+Employees should use appropriate reporting channels when they become
+aware of potential misconduct or compliance issues.
+
+SOURCE:
+Microsoft Report a Concern
+https://www.microsoft.com/en-us/legal/compliance/sbc/report-a-concern
+
+
+============================================================
+19. NON-RETALIATION
+============================================================
+
+Microsoft states that retaliation against someone for raising a
+compliance concern can result in disciplinary action.
+
+Employees are encouraged to raise concerns through appropriate channels.
+
+SOURCE:
+Microsoft Legal - Compliance
+https://www.microsoft.com/en-us/legal/compliance
+
+
+============================================================
+20. COMPLIANCE AND ETHICS
+============================================================
+
+Microsoft describes its compliance and ethics program around three
+major areas:
+
+1. Prevention
+2. Detection
+3. Remediation
+
+Prevention activities can include:
+- Standards of Business Conduct
+- Policies
+- Training
+- Risk assessment
+- Data analytics
+- Third-party vetting
+
+Detection activities can include:
+- Internal audit testing
+- Compliance analytics
+- Controls
+- Investigations
+- Trend analysis
+
+Remediation focuses on identifying root causes and improving controls
+and processes.
+
+Microsoft states that employees who violate its policies and standards
+can face disciplinary action regardless of their level.
+
+Disciplinary action can extend up to and including termination of
+employment.
+
+SOURCE:
+Microsoft Legal - Compliance
+https://www.microsoft.com/en-us/legal/compliance
+
+
+============================================================
+21. ANTI-CORRUPTION
+============================================================
+
+Microsoft's anti-corruption program addresses improper payments and
+corrupt practices.
+
+Microsoft prohibits conduct such as:
+- Bribery
+- Kickbacks
+- Improper payments
+- Corrupt benefits
+- Improper attempts to obtain or retain business
+
+Microsoft provides compliance guidance and reporting mechanisms for
+suspected violations.
+
+SOURCE:
+Microsoft Anti-Corruption
+https://www.microsoft.com/en-us/legal/compliance/anticorruption
+
+
+============================================================
+22. EMPLOYEE TRAINING
+============================================================
+
+Microsoft requires employees to complete certain training related to
+security, privacy, ethics and business conduct.
+
+Microsoft publicly describes:
+- Initial training
+- Annual refresher training
+- Role-based training where applicable
+- Standards of Business Conduct training
+
+Training requirements can depend on the employee's role and
+responsibilities.
+
+SOURCE:
+Microsoft Standards of Business Conduct
+https://www.microsoft.com/en-us/legal/compliance/sbc/standards
+
+
+============================================================
+23. EMPLOYEE EXIT / ACCESS
+============================================================
+
+Microsoft maintains processes for managing employee access to company
+systems and resources.
+
+When employment ends, access to company systems and resources can be
+removed according to applicable processes.
+
+This helps prevent former employees from retaining unauthorized access.
+
+SOURCE:
+Microsoft Standards of Business Conduct / Microsoft Security and
+Compliance information.
+
+
+
+============================================================
+24. QUESTIONS THE RAG ASSISTANT MUST NOT INVENT
+============================================================
+
+The following information should NOT be invented unless an official
+source is available in the knowledge base:
+
+- Exact notice period for every Microsoft employee
+- Exact annual leave entitlement for every country
+- Exact salary of an employee
+- Individual employee compensation
+- Individual employee performance rating
+- Internal HR contact details
+- Confidential employee records
+- Internal disciplinary history
+- Internal promotion criteria not publicly documented
+- Internal manager decisions
+- Private employee benefits information
+- Country-specific policy not contained in the knowledge base
+
+If the answer is unavailable, the assistant should say:
+
+"I couldn't find that information in the available public Microsoft
+HR knowledge base. I don't want to invent a policy. Please consult
+the applicable Microsoft HR/benefits resource."
+
+
+============================================================
+25. RAG METADATA RECOMMENDATION
+============================================================
+
+For each document/chunk, store metadata such as:
+
+company:
+Microsoft
+
+source_type:
+official_public
+
+region:
+Global / United States
+
+category:
+Benefits / Leave / Conduct / Compliance / Legal / Compensation /
+Workplace / Diversity
+
+document:
+Name of source document
+
+source_url:
+Official Microsoft URL
+
+access_type:
+Public information
+
+
+============================================================
+26. IMPORTANT REGION RULE
+============================================================
+
+U.S.-specific benefits must not automatically be applied to employees
+in another country.
+
+For example:
+
+Question:
+"How much parental leave does a Microsoft employee in India receive?"
+
+The assistant should NOT answer using the U.S. 12-week rule.
+
+Correct response:
+"The available public Microsoft information in this knowledge base
+contains U.S.-specific parental leave information. It does not establish
+a universal entitlement for Microsoft employees in India."
+
+
+============================================================
+27. IMPORTANT SOURCE-GROUNDING RULE
+============================================================
+
+The RAG assistant must answer only from retrieved source material.
+
+If the retrieved documents do not contain the answer:
+
+- Do not guess.
+- Do not use a generic HR policy as Microsoft's policy.
+- Do not create an exact number.
+- State that the information is unavailable.
+- Provide the relevant official source when possible.
+
+
+============================================================
+END OF MICROSOFT PUBLIC HR DATASET
+============================================================
