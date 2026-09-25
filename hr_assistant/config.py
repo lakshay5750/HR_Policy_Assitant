@@ -13,12 +13,14 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 JINA_API_KEY = os.getenv("JINA_API_KEY")
 
+
 ## DEFINE PATH - DATA / VECTOR STORE 
 DATA_FILE_PATH = os.path.join("data", "microsoft_hr_policy_public_policy_only.txt")
 VECTOR_FILE_PATH=os.path.join("data","faiss_index")
 
 LLM_MODEL_NAME = "openai/gpt-oss-20b"
 EMBEDDING_MODEL_NAME="jina-embeddings-v5-text-small"
+GUARD_MODEL_NAME="openai/gpt-oss-safeguard-20b"
 
 LANGSMITH_TRACING=os.getenv("LANGSMITH_TRACING","false")
 LANGSMITH_ENDPOINT=os.getenv("LANGSMITH_ENDPOINT")

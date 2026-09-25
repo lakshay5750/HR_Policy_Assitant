@@ -13,6 +13,7 @@ from hr_assistant.splitter import split_into_chunks
 from hr_assistant.tools import create_search_tool
 from hr_assistant.logger import get_logger
 from hr_assistant.tracing import check_langsmith_tracing
+from hr_assistant.guardrails import REFUSAL_MESSAGE,check_input,check_output
 
 from hr_assistant.vector_store import (
     build_vector_store,
@@ -76,9 +77,18 @@ def ask(agent, question: str) -> str:
     
     
     
-  
+    input_is_safe,_=check_input(question)
+    if not input_is_safe:
+        return REFUSAL_MESSAGE
+        
     response = agent.invoke({"messages": [{"role": "user", "content": question}]})
+    
+    
+    
     answer = response["messages"][-1].content
+    output_is_safe,_=check_output(answer)
+    if not output_is_safe:
+        return REFUSAL_MESSAGE
     logger.info("Final answer: %s", answer)
     return answer
 
