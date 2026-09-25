@@ -5,20 +5,26 @@ from langchain_community.vectorstores import FAISS
 
 from hr_assistant import config
 from hr_assistant.embeddings import get_embeddings_model
+from hr_assistant.logger import get_logger
+logger=get_logger(__name__)
 
 
 def build_vector_store(chunks):
     """Embed every chunk and build the faiss index in memory"""
+    logger.info("Building of the faiss index")
     embeddings_model=get_embeddings_model()
+    logger.info("Faiss index build in memory")
     return FAISS.from_documents(chunks,embeddings_model)
 
 
 def save_vector_store(vector_store,path:str=config.VECTOR_FILE_PATH)->None:
     """Save faiss index to local.we don't rebuild every time"""
+    logger.info("Saving the faiss into local cpu")
     vector_store.save_local(path)
     
 def load_vector_store(path:str=config.VECTOR_FILE_PATH):
     """Load the faiss index from the local"""
+    logger.info("Loding the faiss index",path)
     embeddings_model=get_embeddings_model()
     return FAISS.load_local(path,embeddings_model,allow_dangerous_deserialization=True)
 
@@ -28,4 +34,5 @@ def vector_store_exists(path:str=config.VECTOR_FILE_PATH)->bool:
 
 def get_retriever(vector_store,k:int=config.TOP_K_RESULTS):
     """Turn the vector store into the retriever that turn the top-k matching chunks"""
+    logger.info("Creating the retriever with top k documents",k)
     return vector_store.as_retriever(search_kwargs={"k":k})

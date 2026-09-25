@@ -1,0 +1,17 @@
+2026-09-25 17:00:33,947 | INFO | hr_assistant.pipeline | Building HR assistant...
+2026-09-25 17:00:33,948 | INFO | hr_assistant.pipeline | NO Faiss vector store found building one from scratch
+2026-09-25 17:00:34,004 | INFO | hr_assistant.vector_store | Building of the faiss index
+2026-09-25 17:00:34,018 | INFO | hr_assistant.vector_store | Faiss index build in memory
+2026-09-25 17:00:38,498 | INFO | faiss.loader | Loading faiss with AVX512 support.
+2026-09-25 17:00:38,500 | INFO | faiss.loader | Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-09-25 17:00:38,500 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-09-25 17:00:38,501 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-09-25 17:00:38,501 | INFO | faiss.loader | Loading faiss.
+2026-09-25 17:00:38,668 | INFO | faiss.loader | Successfully loaded faiss.
+2026-09-25 17:00:40,435 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-25 17:00:47,947 | INFO | __main__ | === Streamlit run: new question received ===
+2026-09-25 17:00:47,950 | INFO | hr_assistant.pipeline | User question: hi who are you 
+2026-09-25 17:00:48,745 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-25 17:00:48,809 | INFO | hr_assistant.pipeline | Final answer: Hello! 👋 I’m your friendly HR assistant, here to help you with any questions about company policies, benefits, or anything else HR-related. How can I assist you today?

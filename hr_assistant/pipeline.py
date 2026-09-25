@@ -11,7 +11,8 @@ from hr_assistant.document_loader import load_document
 from hr_assistant.llm import get_llm
 from hr_assistant.splitter import split_into_chunks
 from hr_assistant.tools import create_search_tool
-
+from hr_assistant.logger import get_logger
+from hr_assistant.tracing import check_langsmith_tracing
 
 from hr_assistant.vector_store import (
     build_vector_store,
@@ -19,6 +20,7 @@ from hr_assistant.vector_store import (
     load_vector_store,
     vector_store_exists,
 )
+logger=get_logger(__name__)
 
 
 
@@ -31,10 +33,11 @@ def build_vector_store_for_document(file_path: str = config.DATA_FILE_PATH):
     reusing the saved index collection if we have one."""
     if vector_store_exists():
         print("Found an existing saved vector store collection, connecting to it (fast, no re-embedding).")
-        
+        logger.info("vector store collection already exists, reusing it")
         return load_vector_store()
 
     print("No memory faiss index collection found, building one from scratch...")
+    logger.info("NO Faiss vector store found building one from scratch")
     
     documents = load_document(file_path)
     chunks = split_into_chunks(documents)
@@ -48,8 +51,9 @@ def build_vector_store_for_document(file_path: str = config.DATA_FILE_PATH):
     
 def build_hr_assistant(file_path: str = config.DATA_FILE_PATH):
     """Build the full RAG agent, ready to answer questions."""
-    
+    logger.info("Building HR assistant...")
     config.check_api_keys()
+    check_langsmith_tracing()
     
 
     vector_store = build_vector_store_for_document(file_path)
@@ -58,6 +62,7 @@ def build_hr_assistant(file_path: str = config.DATA_FILE_PATH):
 
     llm = get_llm()
     agent = create_hr_agent(llm, [search_tool])
+    logger.info("HR assistant is ready to take questions")
 
    
     return agent
@@ -66,6 +71,7 @@ def build_hr_assistant(file_path: str = config.DATA_FILE_PATH):
 def ask(agent, question: str) -> str:
     """Ask the agent a question and
     return its final answer as plain text."""
+    logger.info("User question: %s", question)
     
     
     
@@ -73,9 +79,6 @@ def ask(agent, question: str) -> str:
   
     response = agent.invoke({"messages": [{"role": "user", "content": question}]})
     answer = response["messages"][-1].content
-   
-    
-    
-    
+    logger.info("Final answer: %s", answer)
     return answer
 
