@@ -12,6 +12,7 @@ load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 JINA_API_KEY = os.getenv("JINA_API_KEY")
+PORTKEY_API_KEY=os.getenv("PORTKEY_API_KEY")
 
 
 ## DEFINE PATH - DATA / VECTOR STORE 

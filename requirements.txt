@@ -10,3 +10,5 @@ jupyter
 python-dotenv
 ipykernel
 langsmith
+portkey-ai
+langchain-openai

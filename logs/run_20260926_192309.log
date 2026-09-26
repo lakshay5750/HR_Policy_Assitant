@@ -1,0 +1,38 @@
+2026-09-26 19:23:52,315 | INFO | hr_assistant.pipeline | Building HR assistant...
+2026-09-26 19:23:52,315 | INFO | hr_assistant.tracing | LangSmith tracing ENABLED - project 'hr_policy_assitant', traces at https://smith.langchain.com
+2026-09-26 19:23:53,263 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/exists "HTTP/1.1 200 OK"
+2026-09-26 19:23:53,266 | INFO | hr_assistant.pipeline | Qdrant Cloud collection already exists, reusing it
+2026-09-26 19:23:53,267 | INFO | hr_assistant.vector_store | Connecting to existing Qdrant collection 'hr_policy'
+2026-09-26 19:23:53,530 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 19:23:54,161 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy "HTTP/1.1 200 OK"
+2026-09-26 19:23:54,613 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 19:23:56,123 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-09-26 19:23:56,123 | INFO | hr_assistant.gateway | Routing LLM calls through Portkey (provider=@hrpolicy)
+2026-09-26 19:23:57,409 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-26 19:24:13,502 | INFO | __main__ | === Streamlit run: new question received ===
+2026-09-26 19:24:13,507 | INFO | hr_assistant.pipeline | User question: hey how are you
+2026-09-26 19:24:15,344 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:24:17,346 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:24:17,683 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:24:17,688 | INFO | hr_assistant.pipeline | Final answer: Hey there! I’m doing great—thanks for asking. How can I help you today?
+2026-09-26 19:24:54,547 | INFO | __main__ | === Streamlit run: new question received ===
+2026-09-26 19:24:54,551 | INFO | hr_assistant.pipeline | User question: give me leave policy of the compaany
+2026-09-26 19:24:56,162 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:24:57,236 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:24:58,406 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 19:24:59,075 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:24:59,736 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 19:25:01,032 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:25:01,469 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 19:25:01,472 | INFO | hr_assistant.pipeline | Final answer: I’m sorry, but the information I could find is limited to the publicly‑available Microsoft U.S. benefits pages. Here’s a concise summary of what those sources indicate about the company’s leave policy:
+
+| Leave Type | Key Points | Source |
+|------------|------------|--------|
+| **Short‑Term Disability (ST&D)** | • Eligible employees can take up to **26 weeks** of disability leave.<br>• **First 8 weeks**: 100 % of regular salary.<br>• **Weeks 9‑26**: 75 % of regular salary. | [Microsoft U.S. Benefits – Leave of Absence](https://usbenefits.microsoft.com/us/en/leave-of-absence.html) |
+| **Military Leave** | • The policy includes provisions for active‑duty, training, or deployment leave. Specific duration and pay details are governed by U.S. law and company policy. | Same page as above |
+| **Vacation / Discretionary Time Off (DTO)** | • Vacation and DTO accrual rates vary by **eligibility and classification** (e.g., full‑time vs. part‑time, seniority).<br>• Floating holidays may be available for eligible employees. | Same page as above |
+| **General Leave of Absence** | • The policy covers a range of leave scenarios (medical, family, bereavement, etc.) under U.S. law. The specific types, eligibility, and duration are outlined in the official benefit documentation. | Same page as above |
+
+> **Note:** These details are drawn from the public Microsoft U.S. benefits site and do not constitute a comprehensive internal policy document. For the most accurate and up‑to‑date information—especially if you’re located outside the U.S., or need specifics about your role or classification—please consult your internal HR portal or speak directly with your HR representative.
+
+If you need more detailed information (e.g., exact accrual rates for your role, or how leave is processed for international employees), let me know and I can help you locate the specific internal policy documents.
