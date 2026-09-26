@@ -12,3 +12,4 @@ ipykernel
 langsmith
 portkey-ai
 langchain-openai
+openevals

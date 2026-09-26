@@ -1,0 +1,212 @@
+2026-09-26 20:32:48,302 | INFO | hr_assistant.evaluation | Creating dataset 'hr-policy-qna' with 58 example(s)
+2026-09-26 20:32:49,822 | INFO | hr_assistant.pipeline | Building HR assistant...
+2026-09-26 20:32:49,822 | INFO | hr_assistant.tracing | LangSmith tracing ENABLED - project 'hr_policy_assitant', traces at https://smith.langchain.com
+2026-09-26 20:32:51,085 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/exists "HTTP/1.1 200 OK"
+2026-09-26 20:32:51,087 | INFO | hr_assistant.pipeline | Qdrant Cloud collection already exists, reusing it
+2026-09-26 20:32:51,087 | INFO | hr_assistant.vector_store | Connecting to existing Qdrant collection 'hr_policy'
+2026-09-26 20:32:51,890 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 20:32:51,960 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy "HTTP/1.1 200 OK"
+2026-09-26 20:32:52,169 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 20:32:53,696 | INFO | hr_assistant.llm | Initializing LLM via Portkey
+2026-09-26 20:32:53,696 | INFO | hr_assistant.gateway | Routing LLM calls through Portkey (provider=@hrpolicy)
+2026-09-26 20:32:53,863 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-26 20:32:53,863 | INFO | hr_assistant.vector_store | Connecting to existing Qdrant collection 'hr_policy'
+2026-09-26 20:32:54,669 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy "HTTP/1.1 200 OK"
+2026-09-26 20:32:54,961 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 20:32:55,722 | INFO | hr_assistant.evaluation | Running evaluation against dataset 'hr-policy-qna'
+2026-09-26 20:32:58,761 | INFO | hr_assistant.pipeline | User question: What does Microsoft consider when discussing pay equity?
+2026-09-26 20:33:01,525 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:02,989 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:04,370 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:05,015 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:05,597 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:05,606 | INFO | hr_assistant.pipeline | Final answer: Microsoft says that pay equity means compensating employees who perform substantially similar work fairly, but it also allows for certain legitimate differences.  When evaluating pay, Microsoft considers factors such as:
+
+| Factor | What it reflects |
+|--------|------------------|
+| **Role** | The specific job function and responsibilities |
+| **Level** | The seniority or grade within the organization |
+| **Tenure** | How long an employee has been in the role or with Microsoft |
+| **Location** | Geographic cost‑of‑living adjustments |
+| **Current market data** | External salary benchmarks |
+| **Individual contribution** | Performance and achievements |
+
+These elements are used to ensure that employees who do similar work receive equitable pay while still accounting for valid differences in job scope, experience, performance, and market conditions.
+2026-09-26 20:33:06,875 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:07,659 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:09,107 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:09,120 | INFO | hr_assistant.pipeline | User question: Does Microsoft provide reasonable accommodation?
+2026-09-26 20:33:09,508 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:10,064 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:11,199 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:11,678 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:12,183 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:12,188 | INFO | hr_assistant.pipeline | Final answer: Yes. Microsoft states that it provides reasonable accommodation to qualified employees with protected disabilities to the extent required by applicable laws and regulations where the employee works. The specific process and requirements can vary by location and individual circumstances.
+2026-09-26 20:33:13,405 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:14,015 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:14,987 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:14,992 | INFO | hr_assistant.pipeline | User question: How much parental leave can eligible U.S. Microsoft employees receive?
+2026-09-26 20:33:15,350 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:15,756 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:16,475 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:17,278 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:17,727 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:17,731 | INFO | hr_assistant.pipeline | Final answer: The publicly available Microsoft U.S. benefits information indicates that eligible U.S. employees can take up to **12 weeks of parental leave**. Birth mothers or parents may be eligible for an additional eight weeks of maternity disability leave, for a total of up to **20 weeks** for eligible birth mothers. These figures apply only to U.S. employees and are subject to eligibility requirements.
+2026-09-26 20:33:18,419 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:19,832 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:20,279 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:33:20,283 | INFO | openai._base_client | Retrying request in 3.000000 seconds (retry 1 of 2)
+2026-09-26 20:33:23,397 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:33:23,398 | INFO | openai._base_client | Retrying request in 2.000000 seconds (retry 2 of 2)
+2026-09-26 20:33:27,060 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:27,134 | INFO | hr_assistant.pipeline | User question: What is Microsoft's mission?
+2026-09-26 20:33:28,260 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:28,509 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:33:28,510 | INFO | openai._base_client | Retrying request in 7.000000 seconds (retry 1 of 2)
+2026-09-26 20:33:36,272 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:36,891 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:36,898 | INFO | hr_assistant.pipeline | Final answer: I’m sorry, but I don’t have that information.
+2026-09-26 20:33:38,129 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:39,147 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:39,379 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:33:39,380 | INFO | openai._base_client | Retrying request in 13.000000 seconds (retry 1 of 2)
+2026-09-26 20:33:53,837 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:53,859 | INFO | hr_assistant.pipeline | User question: What determines an employee's leave eligibility and entitlement?
+2026-09-26 20:33:54,350 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:55,000 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:56,648 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:58,085 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:58,451 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:33:58,468 | INFO | hr_assistant.pipeline | Final answer: **What determines an employee’s leave eligibility and entitlement?**
+
+Microsoft’s leave policies are not one‑size‑fits‑all. Instead, an employee’s eligibility and the amount of leave they can take are set by several key factors that vary by program and geography:
+
+| Factor | How it influences leave |
+|--------|------------------------|
+| **Employee classification** (e.g., full‑time, part‑time, contract) | Full‑time employees are eligible for the standard paid leave pools (vacation, PTO, etc.), while part‑time or contract workers may be eligible for a prorated or limited set of benefits. |
+| **Geographic location / country** | Different countries or regions have distinct statutory requirements (e.g., paid parental leave, military leave) and may have additional company‑specific entitlements. |
+| **Applicable benefits plans** | Employees may be enrolled in different benefit plans that govern vacation, sick leave, discretionary time off, or floating holidays. The specific plan dictates the exact entitlement amount. |
+| **Specific leave programs** | • **Parental leave** – eligibility depends on U.S. statutory requirements and company policy.  <br>• **Military leave** – governed by U.S. military leave policy.  <br>• **Vacation / discretionary time off** – governed by U.S. vacation and discretionary time‑off programs, with eligibility tied to employee status and classification. |
+
+> *Microsoft does NOT have one universally stated leave entitlement for every employee worldwide; each employee’s entitlement is determined by their classification, location, and the applicable benefit plan.*  
+> *(Microsoft U.S. Benefits – Leave of Absence; U.S. Benefits – Vacation/Discretionary Time Off)*
+
+In short, **the combination of an employee’s job classification, where they work, and the specific benefits plans they are enrolled in—along with any relevant statutory or company‑specific programs—defines whether they are eligible for leave and how much leave they are entitled to receive.**
+2026-09-26 20:33:59,638 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:33:59,824 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:33:59,826 | INFO | openai._base_client | Retrying request in 6.000000 seconds (retry 1 of 2)
+2026-09-26 20:34:06,779 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:06,782 | INFO | openai._base_client | Retrying request in 2.000000 seconds (retry 2 of 2)
+2026-09-26 20:34:10,063 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:10,263 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:10,264 | INFO | openai._base_client | Retrying request in 10.000000 seconds (retry 1 of 2)
+2026-09-26 20:34:22,425 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:22,432 | INFO | hr_assistant.pipeline | User question: Does compensation vary by country at Microsoft?
+2026-09-26 20:34:23,044 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:23,200 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:23,532 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 1 of 2)
+2026-09-26 20:34:28,760 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:28,761 | INFO | openai._base_client | Retrying request in 3.000000 seconds (retry 2 of 2)
+2026-09-26 20:34:32,002 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:33,833 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:34:34,582 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:35,015 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:35,017 | INFO | hr_assistant.pipeline | Final answer: Yes.  Microsoft’s compensation plans are **location‑specific** – salaries, bonuses, stock awards and other benefits can differ from one country to another.  The company’s own policy states:
+
+> “Compensation and benefits vary by country.”【26. IMPORTANT REGION RULE】  
+
+Additionally, the compensation framework lists **Location** as one of the factors that influence pay (along with Role, Level, Market data, and Individual contribution)【10. COMPENSATION】.  
+
+So, at Microsoft compensation does vary by country.
+2026-09-26 20:34:36,297 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:34:36,484 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:36,484 | INFO | openai._base_client | Retrying request in 4.000000 seconds (retry 1 of 2)
+2026-09-26 20:34:40,621 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:40,623 | INFO | openai._base_client | Retrying request in 3.000000 seconds (retry 2 of 2)
+2026-09-26 20:34:44,512 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:45,166 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:45,177 | INFO | openai._base_client | Retrying request in 4.000000 seconds (retry 1 of 2)
+2026-09-26 20:34:49,681 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:49,683 | INFO | openai._base_client | Retrying request in 4.000000 seconds (retry 2 of 2)
+2026-09-26 20:34:55,034 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:55,050 | INFO | hr_assistant.pipeline | User question: How can Microsoft employees report compliance concerns?
+2026-09-26 20:34:55,627 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:34:55,822 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:34:55,823 | INFO | openai._base_client | Retrying request in 4.000000 seconds (retry 1 of 2)
+2026-09-26 20:35:00,461 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:01,657 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:35:02,759 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:03,791 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:03,794 | INFO | hr_assistant.pipeline | Final answer: Microsoft employees have a clear, documented route to raise any compliance or ethics concerns:
+
+| Step | What to do | Where to go |
+|------|------------|-------------|
+| **1. Identify the concern** | If you suspect a violation of the Standards of Business Conduct, any Microsoft policy, applicable law, or compliance requirement, you should act promptly. | – |
+| **2. Choose the right channel** | • **Integrity Portal** – the primary, internal, confidential reporting tool for most concerns.<br>• **Other designated reporting channels** (e.g., specific regional hotlines or third‑party services) as outlined in the compliance program. | • <https://www.microsoft.com/en-us/legal/compliance/sbc/report-a-concern> |
+| **3. Submit the report** | Provide the required details (nature of the concern, parties involved, evidence, etc.). You can do so online through the portal or via the designated hotline/email, depending on the channel. | – |
+| **4. Follow up** | You may receive updates on the investigation process. All reports are handled with confidentiality and are protected from retaliation (see the Non‑Retaliation policy). | – |
+
+**Key points from the policy**
+
+* Microsoft’s compliance and ethics program is built around **prevention, detection, and remediation**.  
+* Employees are **encouraged** to report concerns through the **Integrity Portal** or other officially designated channels.  
+* Retaliation against anyone who raises a concern is strictly prohibited and can result in disciplinary action.
+
+If you’re unsure which specific channel applies to your situation (e.g., a regional or country‑specific portal), check the internal compliance resources or ask your HR representative for guidance.
+2026-09-26 20:35:05,059 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:35:05,293 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:05,294 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 1 of 2)
+2026-09-26 20:35:10,452 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:10,453 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 2 of 2)
+2026-09-26 20:35:17,151 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:17,299 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:17,300 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 1 of 2)
+2026-09-26 20:35:22,432 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:22,434 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 2 of 2)
+2026-09-26 20:35:29,635 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:29,645 | INFO | hr_assistant.pipeline | User question: Does the Microsoft public HR dataset contain individual employee compensation information?
+2026-09-26 20:35:30,628 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:30,873 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:30,878 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 1 of 2)
+2026-09-26 20:35:36,614 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:38,301 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:35:38,810 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:39,565 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:39,569 | INFO | hr_assistant.pipeline | Final answer: No. The publicly available Microsoft HR dataset does **not** include individual employee compensation information.
+2026-09-26 20:35:40,660 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:35:40,817 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:40,818 | INFO | openai._base_client | Retrying request in 2.000000 seconds (retry 1 of 2)
+2026-09-26 20:35:43,847 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:44,045 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:35:44,046 | INFO | openai._base_client | Retrying request in 12.000000 seconds (retry 1 of 2)
+2026-09-26 20:35:57,866 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:57,880 | INFO | hr_assistant.pipeline | User question: Where can an employee find the expected worksite arrangement?
+2026-09-26 20:35:58,465 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:35:59,085 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:36:00,335 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:36:00,519 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:36:00,520 | INFO | openai._base_client | Retrying request in 1.000000 seconds (retry 1 of 2)
+2026-09-26 20:36:01,686 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:36:01,687 | INFO | openai._base_client | Retrying request in 1.000000 seconds (retry 2 of 2)
+2026-09-26 20:36:03,592 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:36:04,208 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:36:04,210 | INFO | hr_assistant.pipeline | Final answer: Employees can locate the expected worksite arrangement in the **individual job posting or job description** that was used to recruit them.  
+Microsoft’s policy states:
+
+> “**Individual job postings can specify expected worksite arrangements.**”  
+> — *Microsoft Careers – Legal Policies*  
+
+So, when you’re looking for how many days you’re expected to be in the office, remote, or hybrid, check the specific job posting or the official offer/position description that you received. If it’s not clear there, you can also review the information in your company’s internal HR portal or ask your manager for clarification.
+2026-09-26 20:36:05,750 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 20:36:05,976 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:36:05,977 | INFO | openai._base_client | Retrying request in 5.000000 seconds (retry 1 of 2)
+2026-09-26 20:36:11,838 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:36:12,174 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:36:12,175 | INFO | openai._base_client | Retrying request in 6.000000 seconds (retry 1 of 2)
+2026-09-26 20:36:18,952 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:36:18,953 | INFO | openai._base_client | Retrying request in 1.000000 seconds (retry 2 of 2)
+2026-09-26 20:36:21,764 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:36:21,773 | INFO | hr_assistant.pipeline | User question: Does the Microsoft public HR dataset contain internal HR contact details?
+2026-09-26 20:36:22,434 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 20:36:22,578 | INFO | httpx2 | HTTP Request: POST https://api.portkey.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-26 20:36:22,581 | INFO | openai._base_client | Retrying request in 8.000000 seconds (retry 1 of 2)
