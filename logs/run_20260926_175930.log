@@ -1,0 +1,48 @@
+2026-09-26 17:59:36,456 | INFO | hr_assistant.pipeline | Building HR assistant...
+2026-09-26 17:59:36,457 | INFO | hr_assistant.tracing | LangSmith tracing ENABLED - project 'hr_policy_assitant', traces at https://smith.langchain.com
+2026-09-26 17:59:37,412 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/exists "HTTP/1.1 200 OK"
+2026-09-26 17:59:37,415 | INFO | hr_assistant.pipeline | No Qdrant Cloud collection found, building one from scratch
+2026-09-26 17:59:37,511 | INFO | hr_assistant.vector_store | Embedding 43 chunk(s) and uploading to Qdrant collection 'hr_policy'...
+2026-09-26 17:59:37,594 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 17:59:38,518 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/exists "HTTP/1.1 200 OK"
+2026-09-26 17:59:38,736 | INFO | httpx | HTTP Request: GET https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-09-26 17:59:40,304 | INFO | httpx | HTTP Request: PUT https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy "HTTP/1.1 200 OK"
+2026-09-26 17:59:46,994 | INFO | httpx | HTTP Request: PUT https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points?wait=true "HTTP/1.1 200 OK"
+2026-09-26 17:59:46,997 | INFO | hr_assistant.vector_store | Uploaded to Qdrant collection 'hr_policy'
+2026-09-26 17:59:47,484 | INFO | hr_assistant.pipeline | HR assistant is ready to take questions
+2026-09-26 18:03:45,808 | INFO | __main__ | === Streamlit run: new question received ===
+2026-09-26 18:03:45,823 | INFO | hr_assistant.pipeline | User question: hey how are you
+2026-09-26 18:03:46,748 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:03:48,500 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:03:48,825 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:03:48,831 | INFO | hr_assistant.pipeline | Final answer: Hey! I’m doing great—thanks for asking. How can I help you today?
+2026-09-26 18:04:01,371 | INFO | __main__ | === Streamlit run: new question received ===
+2026-09-26 18:04:01,374 | INFO | hr_assistant.pipeline | User question: tell me leave policy of the company
+2026-09-26 18:04:01,850 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:04:02,835 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:04:04,413 | INFO | httpx | HTTP Request: POST https://8c819b3f-fdd0-43c2-939f-97330a6eb481.eu-central-1-0.aws.cloud.qdrant.io:6333/collections/hr_policy/points/query "HTTP/1.1 200 OK"
+2026-09-26 18:04:05,945 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:04:06,436 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-26 18:04:06,441 | INFO | hr_assistant.pipeline | Final answer: **Microsoft U.S. Leave Policy (publicly available)**  
+*Note: The information below is drawn from Microsoft’s publicly‑available U.S. benefits pages and applies only to U.S. employees. For details that apply to other regions or to your specific employment situation, please consult your local HR representative or the internal policy portal.*
+
+| Leave Type | Key Points | Eligibility / Notes |
+|------------|------------|---------------------|
+| **Vacation / Discretionary Time Off (DTO)** | • Accrual of vacation days varies by tenure and role.<br>• DTO is a separate pool that can be used for personal or family reasons.<br>• Employees may combine vacation and DTO for longer absences. | • Accrual rates differ for full‑time, part‑time, and contract staff.<br>• Managers must approve requests in advance. |
+| **Floating Holidays** | • Eligible employees receive a set number of floating holidays each year.<br>• These can be taken for religious observances, cultural events, or personal reasons. | • Must be scheduled with manager and HR. |
+| **Short‑Term Disability (STD)** | • Up to **26 weeks** of paid leave.<br>• **First 8 weeks**: 100 % of salary.<br>• **Weeks 9‑26**: 75 % of salary.<br>• Requires medical documentation and approval. | • Applies to employees who meet medical eligibility criteria. |
+| **Military Leave** | • Employees who are called to active duty or training receive leave under the Uniformed Services Employment and Reemployment Rights Act (USERRA).<br>• Pay and benefits continue as per standard policy during the leave period. | • Must provide appropriate documentation (e.g., orders). |
+| **Other Leave of Absence** | • Includes parental leave, bereavement, jury duty, and other statutory or company‑specific leaves.<br>• Duration and pay vary by type and local law. | • Employees should submit a formal request and supporting documentation. |
+
+### How to Request Leave
+1. **Submit a request** through the company’s HR portal or via your manager.  
+2. **Provide required documentation** (e.g., medical certificate, military orders).  
+3. **Await approval** from your manager and HR.  
+4. **Record the leave** in the time‑tracking system to ensure accurate payroll and benefits.
+
+### Important Reminders
+- **Eligibility**: Some benefits (e.g., floating holidays, certain PTO accrual rates) are only available to full‑time employees or those who meet tenure thresholds.  
+- **Local Laws**: U.S. federal and state laws may provide additional protections or benefits (e.g., Family and Medical Leave Act).  
+- **Policy Updates**: Microsoft periodically updates its benefits; always check the latest internal policy documents or speak with HR for the most current information.
+
+If you need more specific details—such as exact accrual rates for your role, how to apply for a particular type of leave, or how leave interacts with your benefits package—please let me know, and I can help locate the exact policy section or connect you with the appropriate HR resource.

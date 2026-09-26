@@ -1,7 +1,8 @@
 """Step 4: store chunk embeddings in Qdrant Cloud so we can search them later."""
 import os
-from langchain_community.vectorstores import FAISS
 
+from langchain_qdrant import QdrantVectorStore
+from qdrant_client import QdrantClient
 
 from hr_assistant import config
 from hr_assistant.embeddings import get_embeddings_model
@@ -10,27 +11,42 @@ logger=get_logger(__name__)
 
 
 def build_vector_store(chunks):
-    """Embed every chunk and build the faiss index in memory"""
-    logger.info("Building of the faiss index")
-    embeddings_model=get_embeddings_model()
-    logger.info("Faiss index build in memory")
-    return FAISS.from_documents(chunks,embeddings_model)
+    """Embed every chunk and upload it into a Qdrant Cloud collection."""
+    logger.info(
+        "Embedding %d chunk(s) and uploading to Qdrant collection '%s'...",
+        len(chunks),
+        config.QDRANT_COLLECTION_NAME,
+    )
+    embeddings_model = get_embeddings_model()
+    vector_store = QdrantVectorStore.from_documents(
+        chunks,
+        embedding=embeddings_model,
+        url=config.QDRANT_URL,
+        api_key=config.QDRANT_API_KEY,
+        collection_name=config.QDRANT_COLLECTION_NAME,
+    )
+    logger.info("Uploaded to Qdrant collection '%s'", config.QDRANT_COLLECTION_NAME)
+    return vector_store
 
 
-def save_vector_store(vector_store,path:str=config.VECTOR_FILE_PATH)->None:
-    """Save faiss index to local.we don't rebuild every time"""
-    logger.info("Saving the faiss into local cpu")
-    vector_store.save_local(path)
+
+
     
-def load_vector_store(path:str=config.VECTOR_FILE_PATH):
-    """Load the faiss index from the local"""
-    logger.info("Loding the faiss index",path)
-    embeddings_model=get_embeddings_model()
-    return FAISS.load_local(path,embeddings_model,allow_dangerous_deserialization=True)
+def load_vector_store():
+    """Connect to a Qdrant Cloud collection that was already built before."""
+    logger.info("Connecting to existing Qdrant collection '%s'", config.QDRANT_COLLECTION_NAME)
+    embeddings_model = get_embeddings_model()
+    return QdrantVectorStore.from_existing_collection(
+        embedding=embeddings_model,
+        url=config.QDRANT_URL,
+        api_key=config.QDRANT_API_KEY,
+        collection_name=config.QDRANT_COLLECTION_NAME,
+    )
 
-def vector_store_exists(path:str=config.VECTOR_FILE_PATH)->bool:
-    """Check if a saved faiss index already exists on disk"""
-    return os.path.exists(os.path.join(path,"faiss_index"))
+def vector_store_exists() -> bool:
+    """Check if the Qdrant Cloud collection already exists."""
+    client = QdrantClient(url=config.QDRANT_URL, api_key=config.QDRANT_API_KEY)
+    return client.collection_exists(config.QDRANT_COLLECTION_NAME)
 
 def get_retriever(vector_store,k:int=config.TOP_K_RESULTS):
     """Turn the vector store into the retriever that turn the top-k matching chunks"""

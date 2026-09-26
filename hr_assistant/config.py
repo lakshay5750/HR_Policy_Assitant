@@ -40,6 +40,10 @@ SYSTEM_PROMPT = (
     "facts before answering. If the answer isn't in the search results, say you don't know "
     "instead of guessing."
 )
+
+QDRANT_COLLECTION_NAME=os.getenv("QDRANT_COLLECTION_NAME","hr_policy")
+QDRANT_URL=os.getenv("QDRANT_URL")
+QDRANT_API_KEY=os.getenv("QDRANT_API_KEY")
 def check_api_keys() -> None:
     """Stop early with a clear message if a required API key is missing."""
     if not GROQ_API_KEY:

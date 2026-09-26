@@ -31,21 +31,20 @@ logger=get_logger(__name__)
 
 def build_vector_store_for_document(file_path: str = config.DATA_FILE_PATH):
     """Load + split + embed the document, 
-    reusing the saved index collection if we have one."""
+    reusing the Qdrant Cloud collection if we have one."""
     if vector_store_exists():
-        print("Found an existing saved vector store collection, connecting to it (fast, no re-embedding).")
-        logger.info("vector store collection already exists, reusing it")
+        print("Found an existing Qdrant Cloud collection, connecting to it (fast, no re-embedding).")
+        logger.info("Qdrant Cloud collection already exists, reusing it")
         return load_vector_store()
 
-    print("No memory faiss index collection found, building one from scratch...")
-    logger.info("NO Faiss vector store found building one from scratch")
-    
+    print("No Qdrant Cloud collection found, building one from scratch...")
+    logger.info("No Qdrant Cloud collection found, building one from scratch")
     documents = load_document(file_path)
     chunks = split_into_chunks(documents)
     print(f"Loaded '{file_path}' and split it into {len(chunks)} chunks.")
 
     vector_store = build_vector_store(chunks)
-    print("Vector store built and uploaded to the disk.")
+    print("Vector store built and uploaded to Qdrant Cloud.")
     return vector_store
     
 # data retreival    
